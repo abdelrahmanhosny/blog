@@ -2,40 +2,36 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name:              <firstname> <lastname>
-  email:             <mail@domain.tld>
+  name:              Abdelrahman Hosny
+  email:             abdelrahman@brown.edu
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Hello! My name is Abdelrahman and I am a research-oriented software engineer. 
+    Currently, I study towards a PhD in Computer Science at Brown University, where I try to learn everything that gets me
+    closer to my goal - _to establish an AI-based datacenter in Africa_. This blog navigates a variety of topics
+    that I’ve come across in my journey as a student. Although most of the writing is to confirm that I understand something,
+    I hope that it would help someone out there in their job.
 
-    Open `_data/authors.yml` to edit this text.
+Social:
 
-    [Download Free][kit]
-    -- or --
-    [Buy PRO][buy]
-
-    [kit]: https://github.com/qwtel/hydejack-starter-kit/archive/v8.1.1.zip
-    [buy]: https://app.simplegoods.co/i/NATYVLYT
 
   # This photo will be used in the about section
   picture:
-    path:            https://placehold.it/128x128
+    path:            /assets/img/avatar/128x128.jpeg
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x:            https://placehold.it/128x128
-      2x:            https://placehold.it/256x256
+      1x:            /assets/img/avatar/128x128.jpeg
+      2x:            /assets/img/avatar/256x256.jpeg
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         <username>
-    github:          <username>
-    # email:           <mail@domain.tld>
+    # twitter:         <username>
+    github:          abdelrahmanhosny
+    email:           abdelrahman@brown.edu
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
     # google:          <number>
@@ -71,21 +67,3 @@ author1:
     # stumbleupon:     <username>
     # paypal:          <username>
     # download:        <url>
-
-# Another author (optional)
-author2:
-  name:              <firtname> <lastname>
-  email:             <mail@domain.tld>
-  about:             |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-    Open `_data/authors.yml` to edit this text.
-  picture:           https://placehold.it/128x128
-  twitter:           <username>
-  github:            <username>
-  accent_color:      '#268bd2'
-  accent_image:
-    background:      '#202020'
-    overlay:         false
