@@ -47,6 +47,10 @@ author:
 
 # Add links to the sidebar.
 menu:
+  - title:             Thoughts
+    url:               /thoughts/
+  - title:             Tech Posts
+    url:               /tech/
   - title:             Resume
     url:               https://abdelrahmanhosny.me
 
