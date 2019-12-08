@@ -14,7 +14,7 @@ In the [previous post](/tech/eda/2019-12-06-getting-started-with-openroad-1/), I
 # Prerequisites
 
 ## Machine specs
-To follow up with this tutorial, we recommend the use of a machine with 4GB+ of RAM to build and run the tools. However, if you are using big designs, more memory is required for the tools to perform its computations in a timely manner.
+To follow up with this tutorial, we recommend the use of a machine with 4GB+ of RAM to build and run the tools. However, if you are using big designs, more memory is required for the tools to perform their computations in a timely manner.
 
 <!--more-->
 
