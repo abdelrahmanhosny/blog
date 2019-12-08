@@ -26,6 +26,13 @@ No programming knowledge is required to use the tools.
 Physical design knowledge is a plus, but not necessary.
 When appropriate, I give some links to Wikipedia articles to refer to.
 
+This post assumes that you have some background on hardware design. 
+No programming knowledge is required to use the tools. 
+Physical design knowledge is a plus, but not necessary.
+When appropriate, I give some links to Wikipedia articles to refer to.
+
+ > Disclaimer: I'm part of OpenROAD project team. Thanks to all my colleagues for putting together this effort.
+
  > NOTE: If you are reading this post after July 2020, the chances are that this post is obsolete and there is another up-to-date writing on OpenROAD. Please, see other posts on this blog or refer to the OpenROAD website.
 
 # So, you have a circuit design ..
@@ -60,18 +67,18 @@ Input: Gate-level netlist (netlist.v)
 Output: Graphic Database System format (layout.gds)
 ```
 
-Logic circuits are manufactured using [transistors](https://en.wikipedia.org/wiki/Transistor). A combination of transistors arranged in a specific layout perform the functionality of a logic gate. The goal of the [Physical Design](https://en.wikipedia.org/wiki/Physical_design_(electronics)) step is to obtain the geometric representations of the shapes (of transistors and wire interconnets), that when manufactured in the corresponding layers of material, will produce the required functionality of the circuit (e.g. multiply two numbers). This layout description is defined in a binary format called [GDSII](https://en.wikipedia.org/wiki/GDSII).
+Logic circuits are manufactured using [transistors](https://en.wikipedia.org/wiki/Transistor). A combination of transistors arranged in a specific layout perform the functionality of a logic gate. The goal of the [Physical Design](https://en.wikipedia.org/wiki/Physical_design_(electronics)) step is to obtain the geometric representations of the shapes (of transistors and wire interconnects), that when manufactured in the corresponding layers of material, will produce the required functionality of the circuit (e.g. multiply two numbers). This layout description is defined in a binary format called [GDSII](https://en.wikipedia.org/wiki/GDSII).
 
 **But how can we go from Netlist to GDS?**
 
-There are several steps that are necessary to complete in order to get a manufacturable circuit. Let's give a highl-level overview on them below.
+There are several steps that are necessary to complete in order to get a manufacturable circuit. Let's give a high-level overview on them below.
 
 ## Floorplanning
 
 [Floorplanning](https://en.wikipedia.org/wiki/Floorplan_(microelectronics)) produces a tentative representation of where the major blocks of the circuits are placed. In particular, we want to specify the following:
 
 * What is the area of the chip? And what are the dimensions within which, the gates and wires will be placed?
-* Where are the input and output pins? For example, in the multiplier above, we have 8 pins for input `a`, 8 pins for input `b`, 1 pin for the `clk` input and 16 pins for the output `c`. Now, where on the perimiter of the chip should these pins be placed?
+* Where are the input and output pins? For example, in the multiplier above, we have 8 pins for input `a`, 8 pins for input `b`, 1 pin for the `clk` input and 16 pins for the output `c`. Now, where on the perimeter of the chip should these pins be placed?
 * How are we connecting power/ground to each of the individual gates? This is known as the [Power Delivery Network (PDN)](https://en.wikipedia.org/wiki/Power_network_design_(IC)).
 * Are we placing macros or IP blocks somewhere on the chip? Where are they located? Should they be connected to any IO pins?
 
@@ -92,7 +99,7 @@ OpenROAD uses [TritonCTS](https://github.com/The-OpenROAD-Project/TritonCTS) to 
 ## Routing
 Now that we know the location of every element in the circuit (also referred to as cells), we want to describe how these elements are wired. Wires are defined as an exact geometric path on the metal layers that are used for fabrication. This is where the [Routing](https://en.wikipedia.org/wiki/Routing_(electronic_design_automation)) step comes into place. It builds upon the placement step in order to have a fully connected circuit that functions properly. 
 
-The challenge in the placement/CTS/routing steps is that all of the algorithms used have to obey some technology rules (i.e. constraints) while describing the layout of the circuit. These are also referred to as **Design Rules**, and they are usually given by the technology foundry that are targetted for manufacturing.
+The challenge in the placement/CTS/routing steps is that all of the algorithms used have to obey some technology rules (i.e. constraints) while describing the layout of the circuit. These are also referred to as **Design Rules**, and they are usually given by the technology foundry that are targeted for manufacturing.
 
 OpenROAD uses [FastRoute](https://github.com/The-OpenROAD-Project/FastRoute) and [TritonRoute](https://github.com/The-OpenROAD-Project/TritonRoute) as the global and detailed routing tools respectively.
 

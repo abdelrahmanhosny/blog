@@ -18,6 +18,8 @@ To follow up with this tutorial, we recommend the use of a machine with 4GB+ of 
 
 <!--more-->
 
+> Disclaimer: I'm part of OpenROAD project team. Thanks to all my colleagues for putting together this effort.
+
 > NOTE: If you are reading this post after July 2020, the chances are that this post is obsolete and there is another up-to-date writing on OpenROAD. Please, see other posts on this blog or refer to the OpenROAD website.
 
 ## Operating system
@@ -98,16 +100,19 @@ docker pull openroad/openroad:base
 ## Prepare your data
 
 ### Technology Node
-Typically, a fabrication lab provides designers with the necessary files that describe supported cells along with their physcial and geometric characteristics. These files are referred to as [Standard Cell Library](https://en.wikipedia.org/wiki/Standard_cell).
+Typically, a fabrication lab provides designers with the necessary files that describe supported cells along with their physical and geometric characteristics. These files are referred to as [Standard Cell Library](https://en.wikipedia.org/wiki/Standard_cell).
 
 In this tutorial, we will use an open-source library called [Nangate](https://projects.si2.org/openeda.si2.org/help/group_ld.php?group=63). For your convenience, I provide direct download links:
 - [nangate.lib](/assets/eda/nangate.lib): the lib file includes descriptions of the standard cell functionalities, along with some of their physical properties such as timing and power.
 - [nangate.lef](/assets/eda/nangate.lef): the lef file (or [library exchange format](https://en.wikipedia.org/wiki/Library_Exchange_Format)) includes specification of the cell geometries and metal layers, in addition to the design rules for the target technology.
 
+The original library file can be downloaded from [here](https://github.com/The-OpenROAD-Project/alpha-release/tree/master/flow/platforms/nangate45).
 See licence information of using this library [here](/assets/eda/OpenCellLibraryLicenseSi2.txt).
 
 ### Design
-There are many open-source designs that you can try out from [EPFL benchmark suite](https://github.com/lsils/benchmarks) and [OpenCores](https://opencores.org/). In this tutorial, we will use a simple design that calculates the *greatest common divisor (GCD)* between two numbers. You can download a netlist of the design from [here](/assets/eda/gcd_netlist.v).
+There are many open-source designs that you can try out from [EPFL benchmark suite](https://github.com/lsils/benchmarks) and [OpenCores](https://opencores.org/). In this tutorial, we will use a simple design that calculates the *greatest common divisor (GCD)* between two numbers. For your convenience, you can download a netlist of the design from [here](/assets/eda/gcd_netlist.v).
+
+The original design file can be downloaded from [here](https://github.com/The-OpenROAD-Project/alpha-release/tree/master/flow/designs/src/gcd).
 
 ## Run OpenROAD
 After copying the above files to the `build` directory, run OpenROAD application
@@ -136,15 +141,15 @@ openroad
 
 
 **4. Floorplanning**
+This command initializes the chip with a utilization of 70%.
 ~~~shell
 % initialize_floorplan -utilization 70 -site FreePDK45_38x28_10R_NP_162NW_34O
 ~~~
-This command initializes the chip with a utilization of 70%. The command
 
+This command places IO pins around the chip boundries.
 ~~~shell
 % auto_place_pins metal8
 ~~~
-This command places IO pins around the chip boundries.
 
 **5. Placement**
 ~~~shell
