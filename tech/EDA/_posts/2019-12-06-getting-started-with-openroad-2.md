@@ -14,16 +14,16 @@ In the [previous post](/tech/eda/2019-12-06-getting-started-with-openroad-1/), I
 # Prerequisites
 
 ## Machine specs
-To follow up with this We recommend the use of a machine with 4GB+ of RAM to build and run the tools. However, if you are using big designs, more memory is required for the tools to perform its computations in a timely manner.
+To follow up with this tutorial, we recommend the use of a machine with 4GB+ of RAM to build and run the tools. However, if you are using big designs, more memory is required for the tools to perform its computations in a timely manner.
 
 <!--more-->
 
 > NOTE: If you are reading this post after July 2020, the chances are that this post is obsolete and there is another up-to-date writing on OpenROAD. Please, see other posts on this blog or refer to the OpenROAD website.
 
 ## Operating system
-While the tools can theoritically be built on Linux, Windows and Mac, they have been tested only on CentOS 7. If you have a MacOS or a Windows machine, please, [install Docker](https://docs.docker.com/v17.09/engine/installation/) to follow up with the tutorial.
+While the tools can theoretically be built on Linux, Windows and Mac, they have been tested only on CentOS 7. If you have a MacOS or a Windows machine, please, [install Docker](https://docs.docker.com/v17.09/engine/installation/) to follow up with the tutorial.
 
-## Install the required packges
+## Install the required packages
 
 ### Bare-metal
 
