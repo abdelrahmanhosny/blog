@@ -146,7 +146,7 @@ This command initializes the chip with a utilization of 70%.
 % initialize_floorplan -utilization 70 -site FreePDK45_38x28_10R_NP_162NW_34O
 ~~~
 
-This command places IO pins around the chip boundries.
+This command places IO pins around the chip boundaries.
 ~~~shell
 % auto_place_pins metal8
 ~~~
@@ -196,7 +196,7 @@ DieArea:
 This writes the design to a [Design Exchange Format](https://en.wikipedia.org/wiki/Design_Exchange_Format) that can be used later (or with other open-source tools).
 
 ### What's next?
-This tutorial does not include the logic synthesis step, nor the routing step. This will be continuted in Part 3.
+This tutorial does not include the logic synthesis step, nor the routing step. This will be continued in Part 3.
 
 
-Please, leave questions in the comments below and I respond as soon as possible ..
+Please, leave questions in the comments below and I will respond as soon as possible ..
