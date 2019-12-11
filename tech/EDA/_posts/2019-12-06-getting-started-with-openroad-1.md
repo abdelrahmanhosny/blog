@@ -129,4 +129,4 @@ Please, refer to [OpenROAD v1.0 Expectations](https://vlsicad.ucsd.edu/NEWS19/Op
 Continue to [Part 2](/tech/eda/2019-12-06-getting-started-with-openroad-2/) ..
 
 
-Please, leave questions in the comments below and I respond as soon as possible ..
+Please, leave questions in the comments below and I will respond as soon as possible ..
