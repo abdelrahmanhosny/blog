@@ -8,10 +8,12 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Hello! My name is Abdelrahman and I am a research-oriented software engineer. 
-    Currently, I study towards a PhD in Computer Science at Brown University, where I try to learn everything that gets me
-    closer to my goal - _to establish an AI-based datacenter in Africa_. This blog navigates a variety of topics
-    that I’ve come across in my journey as a student. Although most of the writing is to confirm that I understand something,
+    Hello! My name is Abdelrahman and I try to make silicon compilation catch up with advances 
+    in software compilation: free, open source and easy to use. 
+    Toward that goal, I study the use of reinforcement learning and graph learning to 
+    automate the physical design process, eliminating the required human expertise. 
+    This blog navigates a variety of topics that I’ve come across in my journey as a student. 
+    Although most of the writing is to confirm that I understand something,
     I hope that it would help someone out there in their job.
 
   # This photo will be used in the about section
